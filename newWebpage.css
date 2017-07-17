@@ -1,0 +1,535 @@
+/*reset*/
+body {
+    font-family: "STXihei", "YouYuan", sans-serif;
+    border-top: 1px solid #fff;
+}
+
+a {
+    color: initial;
+
+}
+
+a:hover {
+
+    color: initial;
+}
+
+a,
+a:link,
+a:hover,
+a:active,
+a:visited {
+    text-decoration: none;
+}
+
+h1, h2, h3, h4, h5, h6, p, a, span, div, nav, header, button {
+    margin: 0;
+    padding: 0;
+}
+
+/*header*/
+header {
+    height: 69px;
+    min-height: 69px;
+    background-color: #000;
+    padding: 10px 8px 0 15px;
+    display: flex;
+    border-bottom: 5px solid #343436;
+    /*add*/
+    box-shadow: 0 1px 1px black;
+    position: fixed;
+    z-index: 10;
+    width: 100%;
+    margin-top: -1px;
+}
+
+/*header left*/
+header a {
+    color: #fff;
+
+}
+
+.hLeft {
+    display: flex;
+    flex-grow: 1;
+    min-width: 0;
+}
+
+.hLeft > div:nth-of-type(1) {
+    padding-right: 20px;
+}
+
+.hLeft > div {
+    padding-left: 10px;
+    width: 100%;
+}
+
+.hLeft h3 {
+    font-size: 20px;
+    margin-bottom: 3px;
+
+}
+
+.hLeft h3 a,
+.hLeft p {
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    max-width: 90%;
+    display: inline-block;
+}
+
+.hLeft p {
+    color: #999;
+    letter-spacing: 1px;
+    font-size: 12px;
+}
+
+.hLeft p a {
+    font-size: 14px;
+}
+
+.hLeft a:hover {
+    color: #999;
+}
+
+.hLeft img {
+    vertical-align: middle;
+}
+
+/*header right*/
+.hRight {
+    display: flex;
+    flex-shrink: 0;
+    justify-content: space-between;
+}
+
+.hRight > div {
+
+}
+
+.hView {
+    background: #343436;
+    cursor: pointer;
+}
+
+/*nav*/
+.hHide {
+    padding: 20px;
+    width: 350px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, .5);
+    /*add*/
+    position: absolute;
+    top: 70px;
+    right: 200px;
+    display: none;
+}
+
+.hHide a,
+.hHide .cBlack {
+    color: #000;
+}
+
+.hHide > h4 {
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.hRight a {
+    display: inline-block;
+    border: 3px solid #343436;
+    margin-left: 10px;
+    padding: 10px 16px;
+}
+
+.hRight a:hover {
+    background: #4d4d50;
+    color: #fff;
+}
+
+.logPad > a {
+    background: #343436;
+}
+
+.hidA {
+    font-size: 16px;
+    display: flex;
+    padding: 5px 15px 5px 10px;
+    margin: 0 -10px;
+    justify-content: space-between;
+}
+
+.hidA:hover {
+    background-color: #e7e7e7;
+}
+
+.hidA > span {
+    color: #d7d3cc;
+}
+
+.aQIco {
+    width: 12px;
+    height: 12px;
+    display: inline-block;
+    margin-left: 15px;
+    background: url("images/aQ.png") no-repeat;
+}
+
+.aQIco:hover {
+    background: url("images/hQ.png") no-repeat;
+}
+
+.hidA .PRO {
+    background-color: #fcd000;
+    font-weight: bold;
+    line-height: 22px;
+    padding: 0 5px;
+    font-size: 14px;
+}
+
+.borD {
+    border-top: 1px dotted #ccc;
+}
+
+.hr {
+    border-color: #000;
+}
+
+.links > a {
+    padding: 10px 10px;
+    display: inline-block;
+}
+
+.links > a:focus,
+.links > a:hover {
+    background-color: #e7e7e7;
+}
+
+/*end header*/
+
+/*main-head*/
+.main-head {
+    background-color: #c3a3a9;
+    height: 80px;
+    position: fixed;
+    z-index: 10;
+    top: 70px;
+    width: 100%;
+}
+
+.clicks {
+    padding: 5px 10px;
+    border: 1px solid #fff;
+    border-radius: 5px;
+    outline: none;
+}
+
+.clicks:focus,
+.clicks:hover {
+    background-color: #fff;
+    cursor: pointer;
+}
+
+.center {
+    width: 95%;
+    max-width: 1024px;
+    margin: auto;
+    box-shadow: 0 0 2px 1px rgba(0, 0, 0, 0.2);
+}
+
+.headCenter {
+    height: 100%;
+    display: flex;
+    align-items: center;
+    flex-flow: row wrap;
+    justify-content: space-between;
+    padding-right: 15px;
+    padding-left: 15px;
+    box-shadow: none;
+}
+
+.flex {
+    display: flex;
+    justify-content: space-around;
+}
+
+.headCenter > a > img {
+    margin: 18px 0;
+}
+
+/*href*/
+.href {
+    margin-right: -15px;
+    display: flex;
+}
+
+.href a {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: transparent;
+    font-size: 18px;
+    color: #b03060;
+}
+
+.href a:hover {
+    box-shadow: 0 2px 2px 1px rgba(0, 0, 0, .1);
+}
+
+.href a.active {
+    color: #bbb;
+    background-color: #fff;
+    box-shadow: none;
+}
+
+.main-head button {
+    background-color: transparent;
+}
+
+@media (max-width: 768px) {
+    .href {
+        width: 100%;
+        height: 66px;
+        align-items: center;
+        justify-content: center;
+        background-color: #c3a3a9;
+        border-top: 1px solid #fff;
+        min-width: 360px;
+        margin-left: -17px;
+        display: none;
+    }
+    .href a {
+        padding: 10px 15px;
+        line-height: 45px;
+    }
+    .href a:nth-of-type(1) {
+        width: 30%;
+        text-align: center;
+    }
+}
+
+/*end main-head*/
+/*about*/
+.about {
+    padding: 50px 30px;
+    margin-top: 149px;
+    color: #fff;
+    background-color: #aaa;
+    transition: all 5s ease-out;
+}
+
+.about .text-right {
+    margin-top: 30px;
+}
+
+.FS-20 {
+    font-size: 20px;
+}
+
+hr {
+    border: 0;
+    display: block;
+    border-top: 5px solid
+}
+
+.about-hr {
+    width: 400px;
+    border-color: #fff;
+    margin-right: 20px;
+    margin-top: 40px;
+    margin-bottom: 40px;
+
+}
+
+hr:after {
+    content: '\f121';
+    font-family: FontAwesome;
+    display: inline-block;
+    position: relative;
+    top: -.8em;
+    font-size: 2em;
+}
+
+.about-hr:after {
+    padding-left: 15px;
+    background-color: #aaa;
+    right: -5px;
+}
+
+.FS-22 {
+    font-size: 22px;
+}
+
+.about img {
+    width: 250px;
+    height: 250px;
+    border-radius: 100%;
+}
+
+@media (max-width: 992px) {
+    .about .text-right {
+        text-align: center;
+        margin-bottom: 50px;
+    }
+
+    .about-hr:after {
+        padding-right: 15px;
+        right: 0;
+    }
+
+    .about .about-hr {
+        margin-right: auto;
+        width: initial;
+    }
+}
+
+/*end about*/
+
+/*begin portfolio*/
+.portfolio {
+    color: #888;
+    padding: 80px 72px 50px;
+    background-color: #eee;
+}
+
+.title {
+    width: 500px;
+    margin-top: 40px;
+}
+
+.title:after {
+    padding: 0 10px;
+    background-color: #eee;
+}
+
+.images {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-around;
+}
+
+.images img {
+    width: 400px;
+    display: block;
+    margin: 20px;
+}
+
+@media (max-width: 992px) {
+    .title {
+        width: initial;
+        margin-left: -40px;
+        margin-right: -40px;
+    }
+}
+
+/*end portfolio*/
+/*begin contact*/
+.contact {
+    color: #888;
+    padding: 80px 72px 50px;
+    background-color: #eee;
+}
+
+.boxs {
+    padding: 10px 0;
+    position: relative;
+    margin-top: 50px;
+    border-bottom: 1px solid #c3a3a9;
+}
+
+label {
+    position: absolute;
+    top: 0;
+    font-size: 1.5em;
+    opacity: 0;
+    transition: all .5s ease;
+    -webkit-transition: all .5s ease;
+
+}
+
+.label {
+    top: -1em;
+    opacity: 1;
+    padding: 0;
+    font-size: 1.5em;
+}
+
+input,
+textarea {
+    border: none;
+    outline: none;
+    font-size: 2em;
+    background-color: transparent;
+}
+
+textarea {
+    width: 100%;
+    resize: none;
+}
+
+.contact-left button {
+    margin-top: 50px;
+    border: 1px solid #eee;
+    padding: 5px 10px;
+    font-size: 1.2em;
+}
+
+.contact-left button:hover {
+    border-color: #c3a3a9;
+}
+
+@media (max-width: 992px) {
+    .contact {
+        padding: 40px 40px;
+    }
+}
+
+/*end left */
+/*begin right*/
+.into {
+    font-size: 1.5em;
+    margin-top: 50px;
+    padding-left: 120px;
+    position: relative;
+}
+
+.into p:nth-of-type(2) {
+    margin-top: 50px;
+}
+
+.into p:nth-of-type(3) {
+    margin-top: 150px;
+}
+
+@media (max-width: 992px) {
+    .into {
+        padding-left: 0;
+        padding-right: 0;
+    }
+
+    .into p:nth-of-type(3) {
+        margin-top: 50px;
+    }
+
+    .center h1 {
+        font-size: 30px;
+        font-weight: bold;
+    }
+
+}
+
+/*end contact*/
+footer {
+    background-color: #c3a3a9;
+    padding: 30px 0;
+    font-size: 22px;
+    text-align: center;
+    margin-top: 50px;
+    font-weight: bold;
+}
+
+@media (max-width: 992px) {
+    footer {
+        font-size: 20px;
+    }
+}
+
